@@ -13,7 +13,7 @@ models_cache.json
 session_index.jsonl
 sessions/
 sqlite/
-state_5.sqlite
+state_5.sqlite*
 tmp/
 vendor_imports/
 version.json
