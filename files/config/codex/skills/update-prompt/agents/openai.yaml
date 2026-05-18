@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Prompt"
+  short_description: "Prepare temp prompt files for a fresh Codex thread."
+  default_prompt: "Update temp_prompt.md"

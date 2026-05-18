@@ -1,0 +1,6 @@
+[
+  {
+    "command": "composer.openModelPicker",
+    "key": "Command+Shift+M"
+  }
+]

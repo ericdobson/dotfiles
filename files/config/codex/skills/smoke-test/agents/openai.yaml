@@ -1,0 +1,4 @@
+interface:
+  display_name: "Smoke Test"
+  short_description: "Verify global user skill discovery."
+  default_prompt: "Run the smoke test skill"
