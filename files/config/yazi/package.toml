@@ -1,0 +1,9 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "e84f4fe"
+hash = "26db011a778f261d730d4f5f8bf24b3f"
+
+[[flavor.deps]]
+use = "kmlupreti/ayu-dark"
+rev = "1da67a8"
+hash = "4358d2053d15bd6855968e2d4646c744"
