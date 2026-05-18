@@ -1,0 +1,54 @@
+#!/usr/bin/env zsh
+
+setopt no_global_rcs
+
+# XDG
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_BIN_HOME="$HOME/.local/bin"
+
+# zsh
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
+# path
+# Define an explicit baseline instead of preserving arbitrary parent PATH entries.
+typeset -U PATH path
+path=(
+    $XDG_BIN_HOME
+    /opt/homebrew/bin
+    /opt/homebrew/sbin
+    /usr/local/bin
+    /usr/bin
+    /bin
+    /usr/sbin
+    /sbin
+)
+
+# see app-specific env.zsh files for path additions
+
+# editor
+export VISUAL="/opt/homebrew/bin/hx"
+export EDITOR="$VISUAL"
+export VIMINIT="set nocp | source $XDG_CONFIG_HOME/vim/vimrc"
+
+# terminfo
+export TERMINFO_DIRS="$XDG_DATA_HOME/terminfo:/Applications/kitty.app/Contents/Resources/terminfo:/usr/share/terminfo"
+export TERMINFO="$XDG_DATA_HOME/terminfo"
+
+# source app-specific environment variables
+source $XDG_CONFIG_HOME/aws/env.zsh
+source $XDG_CONFIG_HOME/codex/env.zsh
+[[ -r "$XDG_CONFIG_HOME/dotfiles/env.zsh" ]] && source "$XDG_CONFIG_HOME/dotfiles/env.zsh"
+source $XDG_CONFIG_HOME/eza/env.zsh
+source $XDG_CONFIG_HOME/gnupg/env.zsh
+source $XDG_CONFIG_HOME/homebrew/env.zsh
+source $XDG_CONFIG_HOME/less/env.zsh
+[[ -r "$XDG_CONFIG_HOME/npm/env.zsh" ]] && source "$XDG_CONFIG_HOME/npm/env.zsh"
+source $XDG_CONFIG_HOME/postgresql/env.zsh
+source $XDG_CONFIG_HOME/ripgrep/env.zsh
+source $XDG_CONFIG_HOME/ruby/env.zsh
+source $XDG_CONFIG_HOME/rust/env.zsh
+source $XDG_CONFIG_HOME/starship/env.zsh
+source $XDG_CONFIG_HOME/zoxide/env.zsh

@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+
+# Run zlogin scripts
+typeset -a zlogin_scripts
+
+zlogin_scripts=("$XDG_BIN_HOME"/zlogin_scripts/*(N))
+
+for script in "${zlogin_scripts[@]}"; do
+    [[ -f "$script" && -x "$script" ]] || continue
+
+    if zsh -f "$script"; then
+        :
+    else
+        print -u2 -- "zlogin helper failed: $script"
+    fi
+done

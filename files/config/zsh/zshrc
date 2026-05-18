@@ -1,0 +1,68 @@
+#!/usr/bin/env zsh
+
+# helper functions
+source "$ZDOTDIR/source/functions_set.zsh"
+
+# shell defaults
+PROMPT='%~ %# '
+bindkey -v # use vi key bindings
+source "$ZDOTDIR/source/aliases"
+
+# GnuPG
+if [[ -o interactive ]] && [[ -t 0 ]]; then
+    export GPG_TTY="$(tty)"
+    (( $+commands[gpg-connect-agent] )) && \
+        gpg-connect-agent updatestartuptty /bye >/dev/null 2>&1
+fi
+
+# history
+export HISTFILE="$XDG_STATE_HOME/zsh/zsh_history" # must be set here, not zshenv
+export HISTSIZE=10000
+export SAVEHIST=$HISTSIZE
+
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS    # possibly redundant
+
+# directory stack
+export DIRSTACKSIZE=10
+setopt AUTO_PUSHD           # Push the current directory visited on the stack.
+setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
+setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
+
+# completion
+autoload -Uz compinit && compinit -d $XDG_CACHE_HOME/zsh/zcompdump
+[[ $XDG_CACHE_HOME/zsh/zcompdump.zwc -nt $XDG_CACHE_HOME/zsh/zcompdump ]] || zcompile-many $XDG_CACHE_HOME/zsh/zcompdump
+
+zstyle ':completion:*' completer _extensions _complete _approximate
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/zcompcache"
+
+# app-specific interactive config
+source "$XDG_CONFIG_HOME/aws/rc.zsh"
+source "$XDG_CONFIG_HOME/bat/rc.zsh"
+source "$XDG_CONFIG_HOME/codex/rc.zsh"
+source "$XDG_CONFIG_HOME/fzf/rc.zsh"
+source "$XDG_CONFIG_HOME/git/rc.zsh"
+source "$XDG_CONFIG_HOME/homebrew/rc.zsh"
+source "$XDG_CONFIG_HOME/kitty/rc.zsh"
+source "$XDG_CONFIG_HOME/op/rc.zsh"
+source "$XDG_CONFIG_HOME/vim/rc.zsh"
+source "$XDG_CONFIG_HOME/yazi/rc.zsh"
+
+# prompt
+# Use Starship (keep near the end)
+if [[ -o interactive ]] && [[ -t 0 ]] && (( $+commands[starship] )); then
+    eval "$(starship init zsh)"
+fi
+
+# directory history
+# use zoxide (must be after compinit)
+if [[ -o interactive ]] && [[ -t 0 ]] && (( $+commands[zoxide] )); then
+    eval "$(zoxide init zsh)"
+fi
+
+# plugins
+# Load interactive plugins at the end so widget-wrapping plugins see final ZLE state.
+source "$ZDOTDIR/source/plugins.zsh"

@@ -1,0 +1,64 @@
+#!/usr/bin/env zsh
+
+# Keep app-specific aliases in home/config/<app>/rc.zsh files.
+
+# +---------+
+# | testing |
+# +---------+
+
+alias oprber="op run -- bundle exec ruby"
+
+# +----------+
+# | dotfiles |
+# +----------+
+
+alias df="cd $HOME/Developer/dotfiles; cl"
+
+alias zshenv="$VISUAL $ZDOTDIR/zshenv"
+alias zprofile="$VISUAL $ZDOTDIR/zprofile"
+alias zshrc="$VISUAL $ZDOTDIR/zshrc"
+alias zlogin="$VISUAL $ZDOTDIR/zlogin"
+alias zlogout="$VISUAL $ZDOTDIR/zlogout"
+
+alias al="$VISUAL $ZDOTDIR/source/aliases"
+
+# +-----------------+
+# | file management |
+# +-----------------+
+
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -i'
+
+# +----+
+# | ls |
+# +----+
+
+alias ls='ls -G'
+alias la='ls -A'
+alias lsl='ls -lh'
+alias lal='eza -al' # previously 'ls -lah'
+
+# +------------------+
+# | System Clipboard |
+# +------------------+
+
+alias copy='pbcopy <'
+alias pst='pbpaste >'
+
+# +-----+
+# | Zsh |
+# +-----+
+
+alias cl='clear'
+alias d='dirs -v'                                               # view directory stack
+for index ({1..9}) alias "$index"="cd +${index}"; unset index   # access directory stack
+alias hst='history'
+
+# +-----------------------+
+# | other w/o config dirs |
+# +-----------------------+
+
+alias psl="cd $HOME/Developer/old-pro-codeworks/pause-loop; cl"
+alias ss="cd $HOME/Developer/old-pro-codeworks/slowsort; cl"
+alias dt="cd $HOME/Developer/old-pro-codeworks/devtools; cl"
