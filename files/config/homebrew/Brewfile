@@ -1,0 +1,97 @@
+# vim: syntax=ruby filetype=ruby
+
+# tap "homebrew/cask"
+tap "oven-sh/bun"
+
+brew "awscli"
+brew "bat"
+brew "cypher-shell"
+brew "oven-sh/bun/bun"
+brew "eza"
+brew "fd"
+brew "ffmpeg-full", link: :overwrite # yazi video thumbnails
+brew "fzf"
+brew "gh"
+brew "git"
+brew "git-delta"
+brew "glow"
+brew "gnupg"
+brew "helix"
+brew "libpq" # for psql
+brew "mas"
+brew "node"
+brew "pinentry-mac"
+brew "pipx"
+brew "poppler" # yazi pdf preview
+brew "pytest"
+brew "ripgrep"
+brew "ruby"
+brew "rustup"
+brew "source-highlight"
+brew "starship"
+brew "tree"
+brew "yazi"
+brew "yt-dlp"
+brew "zoxide" # yazi directory history
+brew "zsh"
+
+cask "1password"
+cask "anki"
+cask "audio-hijack"
+cask "codex"
+cask "codex-app"
+cask "cryptomator"
+cask "devonthink"
+cask "docker-desktop"
+cask "duckduckgo"
+cask "fantastical"
+cask "fastmail"
+cask "fission"
+cask "font-sauce-code-pro-nerd-font"
+cask "font-iosevka-nerd-font"
+cask "font-iosevka-term-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
+cask "github"
+cask "google-chrome"
+cask "hazel"
+cask "karabiner-elements"
+cask "keyboard-maestro"
+cask "kindle"
+cask "kitty"
+cask "launchbar"
+cask "little-snitch"
+cask "midikeys"
+cask "native-access"
+cask "neo4j-desktop"
+cask "omnifocus"
+cask "omnioutliner"
+cask "pareto-security"
+cask "rocket"
+cask "setapp"
+cask "signal"
+cask "steam"
+cask "textexpander"
+cask "transmit"
+cask "vcv-rack"
+cask "visual-studio-code"
+
+# mac app store
+mas "1Password for Safari", id: 1569813296
+mas "Acorn 8", id: 6737921844
+mas "CARROT Weather", id: 993487541
+mas "DaisyDisk", id: 411643860
+mas "Dark Noise", id: 1465439395
+mas "iCircuit", id: 454347770
+mas "Linearity Curve", id: 1219074514
+mas "Magic Lasso", id: 1198047227
+mas "Numbers", id: 409203825
+mas "OmniPlan 4", id: 1460319993
+mas "Pages", id: 409201541
+mas "Parcel - Delivery Tracking", id: 375589283
+mas "PCalc", id: 403504866
+mas "Speedtest", id: 1153157709
+mas "StopTheMadness Pro", id: 6471380298
+mas "Tot", id: 1491071483
+mas "Vectornator", id: 1219074514
+mas "WiFi Explorer Pro 3", id: 1587083834
+mas "xcode", id: 497799835
