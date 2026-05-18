@@ -1,0 +1,9 @@
+git_protocol: ssh
+editor: vim
+prompt: enabled
+pager: less
+aliases:
+    co: pr checkout
+http_unix_socket:
+browser: open -a Safari
+version: "1"
