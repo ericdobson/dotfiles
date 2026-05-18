@@ -1,0 +1,12 @@
+# Repo-managed Helix config lives under XDG config alongside other app configs.
+
+theme = "base16_default_dark"
+
+[editor]
+line-number = "absolute"
+rulers = [80]
+text-width = 79
+
+[editor.soft-wrap]
+enable = true
+wrap-at-text-width = true
