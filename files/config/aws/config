@@ -1,0 +1,10 @@
+[profile eric-admin]
+sso_session = eric
+sso_account_id = 783924985200
+sso_role_name = AdministratorAccess
+region = us-east-2
+output = json
+[sso-session eric]
+sso_start_url = https://d-9067da441c.awsapps.com/start
+sso_region = us-east-1
+sso_registration_scopes = sso:account:access
