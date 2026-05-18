@@ -1,0 +1,89 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[╭─](dimmed white) \
+[$username@$hostname](yellow)\
+[ in ](white)\
+${custom.path_parents}\
+${custom.path_leaf} \
+$git_branch\
+$git_status
+[╰─](dimmed white)$character"""
+
+right_format = "$cmd_duration${custom.github}"
+
+add_newline = false
+
+[username]
+show_always = true
+format = "$user"
+
+[hostname]
+ssh_only = false
+format = "$hostname"
+
+[custom.path_parents]
+shell = ["zsh", "--no-rcs"]
+when = "true"
+command = """
+path="${PWD/#$HOME/~}"
+
+if [[ "$path" == "/" || "$path" == "~" ]]; then
+  print -r -- ""
+else
+  parent="${path:h}"
+
+  if [[ "$parent" == "." ]]; then
+    print -r -- ""
+  elif [[ "$parent" == "/" ]]; then
+    print -r -- "/"
+  else
+    print -r -- "$parent/"
+  fi
+fi
+"""
+format = "[$output](dimmed cyan)"
+
+[custom.path_leaf]
+shell = ["zsh", "--no-rcs"]
+when = "true"
+command = """
+path="${PWD/#$HOME/~}"
+
+if [[ "$path" == "/" || "$path" == "~" ]]; then
+  print -r -- "$path"
+else
+  print -r -- "${path:t}"
+fi
+"""
+format = "[$output](cyan)"
+
+[custom.github]
+command = "git config --get remote.origin.url | sed -E 's#(git@github.com:|https://github.com/)##; s#\\.git$##'"
+when = "git rev-parse --is-inside-work-tree >/dev/null 2>&1"
+format = "[$output](red)"
+
+[cmd_duration]
+min_time = 0
+format = "[took $duration]($style) "
+style = "dimmed yellow"
+
+[git_branch]
+style = 'green'
+
+[git_status]
+format = "[$conflicted$deleted$modified$renamed$typechanged$staged$untracked$ahead_behind$stashed]($style)"
+
+conflicted = "[=${count} ](bold red)"
+deleted    = "[✘${count} ](red)"
+modified   = "[!${count} ](yellow)"
+renamed    = "[»${count} ](yellow)"
+typechanged= "[T${count} ](yellow)"
+staged     = "[+${count} ](cyan)"
+untracked  = "[?${count} ](dimmed white)"
+
+ahead      = "[⇡${count} ](cyan)"
+behind     = "[⇣${count} ](cyan)"
+diverged   = "[⇕⇡${ahead_count}⇣${behind_count} ](yellow)"
+
+stashed    = "[*${count} ](dimmed white)"
