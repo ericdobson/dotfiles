@@ -1,0 +1,47 @@
+[alias]
+    br = branch
+    brn = !export args=($1 null) && git switch main && git branch ${args[0]} && git switch ${args[0]} && echo ""
+    ch = checkout
+    cm = commit
+	co = checkout
+    discard = restore
+    last = log -1 HEAD
+    ls = branch
+    st = status
+    unstage = restore --staged
+[commit]
+	gpgsign = true
+[core]
+	pager = delta
+[delta]
+	navigate = true  # use n and N to move between diff sections
+	dark = true      # or light = true, or omit for auto-detection
+	line-numbers = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[init]
+	defaultBranch = main
+[interactive]
+	diffFilter = delta --color-only
+[gpg]
+    format = ssh
+[gpg "ssh"]
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[merge]
+	conflictStyle = zdiff3
+[user]
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII6O2aSRXky7qc7Lf/tpHiCN09dtsZcNFTeQdlPo/jcM
+	name = Eric Dobson
+	email = email@ericdobson.com
+[push]
+	autoSetupRemote = false
+    default = current
+[color]
+	ui = auto
+[credential]
+	helper =
+[url "git@github.com:"]
+	insteadOf = https://github.com/
