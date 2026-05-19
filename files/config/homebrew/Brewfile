@@ -74,7 +74,6 @@ cask "steam"
 cask "textexpander"
 cask "transmit"
 cask "vcv-rack"
-cask "visual-studio-code"
 
 # mac app store
 mas "1Password for Safari", id: 1569813296
