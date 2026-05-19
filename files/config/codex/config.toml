@@ -10,7 +10,8 @@ personality = "pragmatic"
 sandbox_mode = "workspace-write"
 allow_login_shell = false
 
-notify = ["/Users/eric/.config/codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
+
+notify = ["/Users/eric/Developer/dotfiles/files/config/codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
 
 [sandbox_workspace_write]
 network_access = true
@@ -18,32 +19,24 @@ network_access = true
 [agents]
 max_threads = 10
 
-[mcp_servers.github_personal]
+[mcp_servers.github_ericdobson]
 url = "https://api.githubcopilot.com/mcp/"
-bearer_token_env_var = "CODEX_GITHUB_MCP_PERSONAL"
-default_tools_approval_mode = "approve"
-
-[mcp_servers.github_old_pro]
-url = "https://api.githubcopilot.com/mcp/"
-bearer_token_env_var = "CODEX_GITHUB_MCP_OLD_PRO"
+bearer_token_env_var = "CODEX_GITHUB_MCP_ERICDOBSON"
 default_tools_approval_mode = "approve"
 
 [projects."/Users/eric/Developer/dotfiles"]
 trust_level = "trusted"
 
-[projects."/Users/eric/Developer/productivity-system"]
-trust_level = "trusted"
-
 [projects."/Users/eric/Developer/notes"]
 trust_level = "trusted"
 
-[projects."/Users/eric/Developer/old-pro-codeworks/pause-loop"]
+[projects."/Users/eric/Developer/pause-loop"]
 trust_level = "trusted"
 
-[projects."/Users/eric/Developer/old-pro-codeworks/devtools"]
+[projects."/Users/eric/Developer/devtools"]
 trust_level = "trusted"
 
-[projects."/Users/eric/Developer/old-pro-codeworks/slowsort"]
+[projects."/Users/eric/Developer/slowsort"]
 trust_level = "trusted"
 
 [projects."/Users/eric/Developer/ericdobson.com"]

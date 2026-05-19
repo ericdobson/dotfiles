@@ -59,6 +59,6 @@ alias hst='history'
 # | other w/o config dirs |
 # +-----------------------+
 
-alias psl="cd $HOME/Developer/old-pro-codeworks/pause-loop; cl"
-alias ss="cd $HOME/Developer/old-pro-codeworks/slowsort; cl"
-alias dt="cd $HOME/Developer/old-pro-codeworks/devtools; cl"
+alias psl="cd $HOME/Developer/pause-loop; cl"
+alias ss="cd $HOME/Developer/slowsort; cl"
+alias dt="cd $HOME/Developer/devtools; cl"
