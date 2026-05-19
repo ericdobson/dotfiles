@@ -12,6 +12,7 @@ logs_2.sqlite*
 models_cache.json
 session_index.jsonl
 sessions/
+shell_snapshots/
 sqlite/
 state_5.sqlite*
 tmp/
