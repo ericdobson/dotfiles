@@ -6,7 +6,7 @@ archived_sessions/
 auth.json
 cache/
 computer-use/
-goals_1.sqlite
+goals_1.sqlite*
 installation_id
 log/
 logs_2.sqlite*
