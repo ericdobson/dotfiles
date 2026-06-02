@@ -3,13 +3,16 @@
 .tmp
 ambient-suggestions/
 archived_sessions/
+attachments/
 auth.json
 cache/
+chat_processes.json
 computer-use/
 goals_1.sqlite*
 installation_id
 log/
 logs_2.sqlite*
+memories_1.sqlite*
 models_cache.json
 session_index.jsonl
 sessions/
