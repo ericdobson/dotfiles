@@ -36,8 +36,8 @@ alias rm='rm -i'
 
 alias ls='ls -G'
 alias la='ls -A'
-alias lsl='ls -lh'
-alias lal='eza -al' # previously 'ls -lah'
+alias lsl='eza -lh'
+alias lal='eza -alh' # previously 'ls -lah'
 
 # +------------------+
 # | System Clipboard |
