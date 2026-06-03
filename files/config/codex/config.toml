@@ -58,23 +58,20 @@ last_updated = "2026-06-01T18:13:38Z"
 source_type = "local"
 source = "/Users/eric/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
 
-[plugins."computer-use@openai-bundled"]
-enabled = true
-
 [plugins."documents@openai-primary-runtime"]
-enabled = true
+enabled = false
 
 [plugins."spreadsheets@openai-primary-runtime"]
-enabled = true
+enabled = false
 
 [plugins."presentations@openai-primary-runtime"]
-enabled = true
-
-[plugins."browser@openai-bundled"]
-enabled = true
+enabled = false
 
 [desktop]
 followUpQueueMode = "steer"
 git-commit-instructions = "Commit messages should succinctly describe the total effect of changes made, not just the most recent edits. For example if a new feature is added, then a couple small edits are staged, the commit message should reflect the feature, not the small edits."
 git-pr-instructions = ""
 conversationDetailMode = "STEPS_COMMANDS"
+
+[apps.connector_68df038e0ba48191908c8434991bbac2]
+enabled = false
