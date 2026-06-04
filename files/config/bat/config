@@ -1,4 +1,5 @@
-# copied placeholder rules
-
-# Use italic text on the terminal (not supported on all terminals)
+# use italic text on the terminal
 --italic-text=always
+
+# use terminal theme
+# --theme=ansi
