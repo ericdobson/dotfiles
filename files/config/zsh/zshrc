@@ -6,6 +6,10 @@ source "$ZDOTDIR/source/functions_set.zsh"
 # shell defaults
 PROMPT='%~ %# '
 bindkey -v # use vi key bindings
+KEYTIMEOUT=1 # reduce vi-mode Escape delay; unit is 1/100 second
+if [[ -o interactive ]] && [[ -t 0 ]]; then
+    source "$ZDOTDIR/source/vi-mode-cursor-shapes.zsh"
+fi
 source "$ZDOTDIR/source/aliases"
 
 # GnuPG
