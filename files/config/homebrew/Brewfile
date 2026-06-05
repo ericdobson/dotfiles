@@ -67,11 +67,9 @@ cask "neo4j-desktop"
 cask "omnifocus"
 cask "omnioutliner"
 cask "pareto-security"
-cask "rocket"
 cask "setapp"
 cask "signal"
 cask "steam"
-cask "textexpander"
 cask "transmit"
 cask "vcv-rack"
 
@@ -83,6 +81,7 @@ mas "CARROT Weather", id: 993487541
 mas "DaisyDisk", id: 411643860
 mas "Dark Noise", id: 1465439395
 mas "iCircuit", id: 454347770
+mas "klack", id: 6446206067
 mas "Linearity Curve", id: 1219074514
 mas "Magic Lasso", id: 1198047227
 mas "Numbers", id: 409203825
