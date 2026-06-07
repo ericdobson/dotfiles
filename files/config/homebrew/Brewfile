@@ -75,7 +75,6 @@ cask "vcv-rack"
 
 # mac app store
 mas "1Password for Safari", id: 1569813296
-mas "Acorn 8", id: 6737921844
 mas "cardhop-contacts", id: 1290358394
 mas "CARROT Weather", id: 993487541
 mas "DaisyDisk", id: 411643860
@@ -89,6 +88,7 @@ mas "OmniPlan 4", id: 1460319993
 mas "Pages", id: 409201541
 mas "Parcel - Delivery Tracking", id: 375589283
 mas "PCalc", id: 403504866
+mas "pixelmator-pro", id: 1289583905
 mas "Speedtest", id: 1153157709
 mas "StopTheMadness Pro", id: 6471380298
 mas "Tot", id: 1491071483
