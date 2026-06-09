@@ -52,6 +52,7 @@ source "$XDG_CONFIG_HOME/git/rc.zsh"
 source "$XDG_CONFIG_HOME/helix/rc.zsh"
 source "$XDG_CONFIG_HOME/homebrew/rc.zsh"
 source "$XDG_CONFIG_HOME/kitty/rc.zsh"
+source "$XDG_CONFIG_HOME/lazygit/rc.zsh"
 source "$XDG_CONFIG_HOME/op/rc.zsh"
 source "$XDG_CONFIG_HOME/yazi/rc.zsh"
 

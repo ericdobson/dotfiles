@@ -17,6 +17,7 @@ brew "git-delta"
 brew "glow"
 brew "gnupg"
 brew "helix"
+brew "lazygit"
 brew "libpq" # for psql
 brew "mas"
 brew "node"
