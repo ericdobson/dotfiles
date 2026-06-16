@@ -48,13 +48,19 @@ trust_level = "trusted"
 [projects."/Users/eric/Developer/creating-flow-corpus-project"]
 trust_level = "trusted"
 
+[projects."/Users/eric/Developer/loop-planner"]
+trust_level = "trusted"
+
+[projects."/Users/eric/Developer/songwriting-schema"]
+trust_level = "trusted"
+
 [marketplaces.openai-bundled]
 last_updated = "2026-05-18T17:05:11Z"
 source_type = "local"
 source = "/Users/eric/.config/codex/.tmp/bundled-marketplaces/openai-bundled"
 
 [marketplaces.openai-primary-runtime]
-last_updated = "2026-06-01T18:13:38Z"
+last_updated = "2026-06-16T01:13:53Z"
 source_type = "local"
 source = "/Users/eric/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
 
@@ -66,6 +72,9 @@ enabled = false
 
 [plugins."presentations@openai-primary-runtime"]
 enabled = false
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
 
 [desktop]
 followUpQueueMode = "steer"
