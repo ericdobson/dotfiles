@@ -1,13 +1,10 @@
 # vim: syntax=ruby filetype=ruby
 
 brew "aerc"
-# tap "homebrew/cask"
-tap "oven-sh/bun"
-
 brew "awscli"
 brew "bat"
+brew "bun"
 brew "cypher-shell"
-brew "oven-sh/bun/bun"
 brew "eza"
 brew "fd"
 brew "ffmpeg-full", link: :overwrite # yazi video thumbnails
