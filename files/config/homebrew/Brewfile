@@ -1,5 +1,6 @@
 # vim: syntax=ruby filetype=ruby
 
+brew "aerc"
 # tap "homebrew/cask"
 tap "oven-sh/bun"
 
@@ -31,6 +32,7 @@ brew "rustup"
 brew "source-highlight"
 brew "starship"
 brew "tree"
+brew "w3m"
 brew "yazi"
 brew "yt-dlp"
 brew "zoxide" # yazi directory history
