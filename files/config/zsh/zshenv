@@ -45,6 +45,7 @@ source $XDG_CONFIG_HOME/eza/env.zsh
 source $XDG_CONFIG_HOME/gnupg/env.zsh
 source $XDG_CONFIG_HOME/homebrew/env.zsh
 source $XDG_CONFIG_HOME/less/env.zsh
+source $XDG_CONFIG_HOME/nb/env.zsh
 [[ -r "$XDG_CONFIG_HOME/npm/env.zsh" ]] && source "$XDG_CONFIG_HOME/npm/env.zsh"
 source $XDG_CONFIG_HOME/postgresql/env.zsh
 source $XDG_CONFIG_HOME/ripgrep/env.zsh
