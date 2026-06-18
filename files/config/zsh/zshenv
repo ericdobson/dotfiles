@@ -53,4 +53,5 @@ source $XDG_CONFIG_HOME/ripgrep/env.zsh
 source $XDG_CONFIG_HOME/ruby/env.zsh
 source $XDG_CONFIG_HOME/rust/env.zsh
 source $XDG_CONFIG_HOME/starship/env.zsh
+source $XDG_CONFIG_HOME/w3m/env.zsh
 source $XDG_CONFIG_HOME/zoxide/env.zsh
