@@ -39,6 +39,7 @@ export TERMINFO="$XDG_DATA_HOME/terminfo"
 
 # source app-specific environment variables
 source $XDG_CONFIG_HOME/aws/env.zsh
+source $XDG_CONFIG_HOME/claude/env.zsh
 source $XDG_CONFIG_HOME/codex/env.zsh
 [[ -r "$XDG_CONFIG_HOME/dotfiles/env.zsh" ]] && source "$XDG_CONFIG_HOME/dotfiles/env.zsh"
 source $XDG_CONFIG_HOME/eza/env.zsh
