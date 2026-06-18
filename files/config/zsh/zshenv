@@ -42,6 +42,7 @@ source $XDG_CONFIG_HOME/aws/env.zsh
 source $XDG_CONFIG_HOME/claude/env.zsh
 source $XDG_CONFIG_HOME/codex/env.zsh
 [[ -r "$XDG_CONFIG_HOME/dotfiles/env.zsh" ]] && source "$XDG_CONFIG_HOME/dotfiles/env.zsh"
+source $XDG_CONFIG_HOME/exiftool/env.zsh
 source $XDG_CONFIG_HOME/eza/env.zsh
 source $XDG_CONFIG_HOME/gnupg/env.zsh
 source $XDG_CONFIG_HOME/homebrew/env.zsh

@@ -6,6 +6,7 @@ brew "bat"
 brew "bash"
 brew "bun"
 brew "cypher-shell"
+brew "exiftool"
 brew "eza"
 brew "fd"
 brew "ffmpeg-full", link: :overwrite # yazi video thumbnails
