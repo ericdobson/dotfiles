@@ -1,7 +1,7 @@
 #:schema https://developers.openai.com/codex/config-schema.json
 
 model = "gpt-5.5"
-model_reasoning_effort = "high"
+model_reasoning_effort = "xhigh"
 plan_mode_reasoning_effort = "xhigh"
 model_reasoning_summary = "detailed"
 model_verbosity = "high"
@@ -52,6 +52,9 @@ trust_level = "trusted"
 trust_level = "trusted"
 
 [projects."/Users/eric/Developer/songwriting-schema"]
+trust_level = "trusted"
+
+[projects."/Users/eric/Developer/mainframe"]
 trust_level = "trusted"
 
 [marketplaces.openai-bundled]
