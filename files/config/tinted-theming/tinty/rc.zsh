@@ -22,17 +22,17 @@ if (( $+commands[tinty] )); then
   command tinty init >/dev/null && tinty_source_shell_themes
 
   tinty() {
-    local subcommand status
+    local subcommand tinty_status
 
     subcommand="$1"
 
     command tinty "$@"
-    status=$?
+    tinty_status=$?
 
-    if (( status == 0 )) && [[ "$subcommand" == apply || "$subcommand" == init ]]; then
+    if (( tinty_status == 0 )) && [[ "$subcommand" == apply || "$subcommand" == init ]]; then
       tinty_source_shell_themes
     fi
 
-    return "$status"
+    return "$tinty_status"
   }
 fi
