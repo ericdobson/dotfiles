@@ -12,7 +12,7 @@ alias oprber="op run -- bundle exec ruby"
 # | dotfiles |
 # +----------+
 
-alias df="cd $HOME/Developer/dotfiles; cl"
+alias df="cd $HOME/Developer/dotfiles/files/config; cl"
 
 alias zshenv="$VISUAL $ZDOTDIR/zshenv"
 alias zprofile="$VISUAL $ZDOTDIR/zprofile"
