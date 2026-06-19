@@ -35,12 +35,12 @@ NODE_REPL_NODE_MODULE_DIRS = "/Applications/Codex.app/Contents/Resources/cua_nod
 NODE_REPL_NODE_PATH = "/Applications/Codex.app/Contents/Resources/cua_node/bin/node"
 NODE_REPL_TRUSTED_CODE_PATHS = "/Users/eric/.config/codex"
 CODEX_HOME = "/Users/eric/.config/codex"
-NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "843b151e6459c4593a4a9c5bf817cc51e28fc29afe6b75990deceb2f914995ac"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "feca4d852d7d18eab5e217b18c8c80099fe667c330e836640fd7a48f362de525"
 BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
 NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
 NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
 BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.616.31447"
+BROWSER_USE_CODEX_APP_VERSION = "26.616.32156"
 CODEX_CLI_PATH = "/Applications/Codex.app/Contents/Resources/codex"
 
 [projects."/Users/eric/Developer/dotfiles"]
