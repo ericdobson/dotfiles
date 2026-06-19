@@ -28,6 +28,11 @@ openAppsOnActivation = false
 shortcut = 'cmd+shift+2'
 symbolIconName = 'apple.terminal'
 
+[profiles.workspaces.appToFocus]
+bundleIdentifier = 'net.kovidgoyal.kitty'
+iconPath = '/Applications/kitty.app/Contents/Resources/kitty.icns'
+name = 'kitty'
+
 [[profiles.workspaces.apps]]
 bundleIdentifier = 'net.kovidgoyal.kitty'
 iconPath = '/Applications/kitty.app/Contents/Resources/kitty.icns'
