@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 # Sourced from zshrc. Keep this file limited to interactive shell behavior.
+# Keep network work and expensive startup logic out unless there is a concrete reason.
 
 # Set up fzf key bindings and fuzzy completion
 if [[ -o interactive ]] && [[ -t 0 ]] && (( $+commands[fzf] )); then

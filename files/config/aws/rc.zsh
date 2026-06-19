@@ -3,20 +3,6 @@
 # Sourced from zshrc. Keep this file limited to interactive shell behavior.
 # Keep network work and expensive startup logic out unless there is a concrete reason.
 
-# aliases for frequent commands
-# alias appc="$VISUAL $XDG_CONFIG_HOME/<app>/<app>.conf"
-# alias appd="cd $XDG_CONFIG_HOME/<app>; eza -al"
-# alias app-status="app status"
-
-# command replacement aliases
-# alias oldapp="newapp"
-
-# small formatting helpers
-# appmd() {
-#   fold -sw 80 -- "$1" | command app -l markdown
-# }
-
-# wrappers should use command to avoid recursively calling themselves
 aws() {
   if ! (( $+commands[aws] )); then
     print -u2 -- "aws: command not found"
