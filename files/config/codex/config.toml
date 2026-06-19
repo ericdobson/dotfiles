@@ -10,9 +10,6 @@ personality = "pragmatic"
 sandbox_mode = "workspace-write"
 allow_login_shell = false
 
-
-notify = ["/Users/eric/Developer/dotfiles/files/config/codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
-
 [sandbox_workspace_write]
 network_access = true
 
@@ -111,4 +108,5 @@ conversationDetailMode = "STEPS_COMMANDS"
 enabled = false
 
 [features]
+computer_use = false
 js_repl = false
