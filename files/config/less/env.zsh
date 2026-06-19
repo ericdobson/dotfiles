@@ -14,7 +14,7 @@ if src_hilite_lesspipe="$(command -v src-hilite-lesspipe.sh 2>/dev/null)"; then
 fi
 
 # default command flags
-export LESS='-R -X -F'
+export LESS='-RF'
 
 # man page width
 export MANWIDTH=80
