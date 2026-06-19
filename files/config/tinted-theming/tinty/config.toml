@@ -1,0 +1,13 @@
+[[items]]
+name = "tinted-helix"
+path = "https://github.com/tinted-theming/tinted-helix"
+themes-dir = "themes"
+hook = "cp -f \"%f\" ~/.config/helix/themes/"
+supported-systems = ["tinted8", "base16", "base24"]
+
+[[items]]
+path = "https://github.com/tinted-theming/tinted-terminal"
+name = "tinted-terminal"
+themes-dir = "themes/kitty"
+hook = "if [ -n \"$KITTY_PID\" ] && kill -0 \"$KITTY_PID\" 2>/dev/null; then kill -USR1 \"$KITTY_PID\"; fi"
+supported-systems = ["tinted8", "base16", "base24"]
