@@ -2,4 +2,4 @@
 --italic-text=always
 
 # use terminal theme
-# --theme=ansi
+--theme=base16-256
