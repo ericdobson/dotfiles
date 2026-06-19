@@ -1,6 +1,6 @@
 # Repo-managed Helix config lives under XDG config alongside other app configs.
 
-theme = "base16_default_dark"
+theme = "tinted-helix-themes-file"
 
 [editor]
 line-number = "absolute"
