@@ -2,8 +2,8 @@
 
 format = """
 [╭─](dimmed white) \
-[$username@$hostname](yellow)\
-[ in ](white)\
+[$username@$hostname](green)\
+[ in ](dimmed white)\
 ${custom.path_parents}\
 ${custom.path_leaf} \
 $git_branch\
@@ -42,7 +42,7 @@ else
   fi
 fi
 """
-format = "[$output](dimmed cyan)"
+format = "[$output](dimmed blue)"
 
 [custom.path_leaf]
 shell = ["zsh", "--no-rcs"]
@@ -56,20 +56,20 @@ else
   print -r -- "${path:t}"
 fi
 """
-format = "[$output](cyan)"
+format = "[$output](blue)"
 
 [custom.github]
 command = "git config --get remote.origin.url | sed -E 's#(git@github.com:|https://github.com/)##; s#\\.git$##'"
 when = "git rev-parse --is-inside-work-tree >/dev/null 2>&1"
-format = "[$output](red)"
+format = "[$output](dimmed purple)"
 
 [cmd_duration]
 min_time = 0
 format = "[took $duration]($style) "
-style = "dimmed yellow"
+style = "dimmed white"
 
 [git_branch]
-style = 'green'
+style = 'purple'
 
 [git_status]
 format = "[$conflicted$deleted$modified$renamed$typechanged$staged$untracked$ahead_behind$stashed]($style)"
@@ -79,11 +79,11 @@ deleted    = "[✘${count} ](red)"
 modified   = "[!${count} ](yellow)"
 renamed    = "[»${count} ](yellow)"
 typechanged= "[T${count} ](yellow)"
-staged     = "[+${count} ](cyan)"
-untracked  = "[?${count} ](dimmed white)"
+staged     = "[+${count} ](green)"
+untracked  = "[?${count} ](purple)"
 
-ahead      = "[⇡${count} ](cyan)"
-behind     = "[⇣${count} ](cyan)"
+ahead      = "[⇡${count} ](blue)"
+behind     = "[⇣${count} ](blue)"
 diverged   = "[⇕⇡${ahead_count}⇣${behind_count} ](yellow)"
 
-stashed    = "[*${count} ](dimmed white)"
+stashed    = "[*${count} ](dimmed purple)"
