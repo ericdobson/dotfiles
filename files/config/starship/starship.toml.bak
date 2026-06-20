@@ -1,18 +1,17 @@
-# Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# Use custom format
 format = """
 [╭─](dimmed white) \
-[$username@$hostname ](green)\
-$directory \
-$git_branch$git_status
+[$username@$hostname](green)\
+[ in ](dimmed white)\
+${custom.path_parents}\
+${custom.path_leaf} \
+$git_branch\
+$git_status
 [╰─](dimmed white)$character"""
 
-# Use custom right prompt format
 right_format = "$cmd_duration${custom.github}"
 
-# Disable the blank line at the start of the prompt
 add_newline = false
 
 [username]
@@ -23,13 +22,42 @@ format = "$user"
 ssh_only = false
 format = "$hostname"
 
-[directory]
-truncation_length = 8
-style = 'blue'
-substitutions = [
-  { from = "/files/config/", to = "/…/"}
-]
-  
+[custom.path_parents]
+shell = ["zsh", "--no-rcs"]
+when = "true"
+command = """
+path="${PWD/#$HOME/~}"
+
+if [[ "$path" == "/" || "$path" == "~" ]]; then
+  print -r -- ""
+else
+  parent="${path:h}"
+
+  if [[ "$parent" == "." ]]; then
+    print -r -- ""
+  elif [[ "$parent" == "/" ]]; then
+    print -r -- "/"
+  else
+    print -r -- "$parent/"
+  fi
+fi
+"""
+format = "[$output](dimmed blue)"
+
+[custom.path_leaf]
+shell = ["zsh", "--no-rcs"]
+when = "true"
+command = """
+path="${PWD/#$HOME/~}"
+
+if [[ "$path" == "/" || "$path" == "~" ]]; then
+  print -r -- "$path"
+else
+  print -r -- "${path:t}"
+fi
+"""
+format = "[$output](blue)"
+
 [custom.github]
 command = "git config --get remote.origin.url | sed -E 's#(git@github.com:|https://github.com/)##; s#\\.git$##'"
 when = "git rev-parse --is-inside-work-tree >/dev/null 2>&1"
@@ -42,7 +70,6 @@ style = "dimmed white"
 
 [git_branch]
 style = 'purple'
-format = '[$symbol$branch(:$remote_branch)]($style) '
 
 [git_status]
 format = "[$conflicted$deleted$modified$renamed$typechanged$staged$untracked$ahead_behind$stashed]($style)"
