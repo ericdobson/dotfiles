@@ -1,14 +1,10 @@
 # files/config
 
-This tree contains repo-managed XDG-style application configuration. In the
-installed dotfiles layout, this directory is expected to correspond to
-`$XDG_CONFIG_HOME`.
+This tree contains repo-managed XDG-style application configuration. In the installed dotfiles layout, this directory is expected to correspond to `$XDG_CONFIG_HOME`.
 
 ## `env.zsh` Files
 
-Files named `env.zsh` are sourced from the zsh environment startup path,
-usually from `files/config/zsh/zshenv`. They run for every zsh process, so keep
-them cheap, deterministic, and independent of interactive shell state.
+Files named `env.zsh` are sourced from the zsh environment startup path, usually from `files/config/zsh/zshenv`. They run for every zsh process, so keep them cheap, deterministic, and independent of interactive shell state.
 
 Use `env.zsh` files for:
 
@@ -17,8 +13,7 @@ Use `env.zsh` files for:
 - exported tool flags
 - app-specific history and cache paths
 - deterministic `path` additions
-- cheap helper discovery only when an environment variable genuinely needs an
-  absolute command path
+- cheap helper discovery only when an environment variable genuinely needs an absolute command path
 - cheap terminal escape environment variables
 
 Do not use `env.zsh` files for:
@@ -36,8 +31,7 @@ Do not use `env.zsh` files for:
 - expensive command substitutions
 - anything that assumes a TTY or interactive shell
 
-Use the matching `rc.zsh` file for aliases, wrappers, completions, prompt
-integration, and other interactive shell behavior.
+Use the matching `rc.zsh` file for aliases, wrappers, completions, prompt integration, and other interactive shell behavior.
 
 Every `env.zsh` file should start with this boilerplate:
 
@@ -58,8 +52,7 @@ if [[ -d "/opt/homebrew/opt/tool/bin" ]]; then
 fi
 ```
 
-When a variable genuinely needs an absolute helper command, cheap local
-discovery is acceptable:
+When a variable genuinely needs an absolute helper command, cheap local discovery is acceptable:
 
 ```zsh
 if helper="$(command -v helper-name 2>/dev/null)"; then
@@ -67,8 +60,7 @@ if helper="$(command -v helper-name 2>/dev/null)"; then
 fi
 ```
 
-Literal secret references are acceptable here when another tool resolves them
-later, but do not run a secret manager from `zshenv`:
+Literal secret references are acceptable here when another tool resolves them later, but do not run a secret manager from `zshenv`:
 
 ```zsh
 export TOOL_API_TOKEN="op://Vault/item/field"
@@ -76,9 +68,7 @@ export TOOL_API_TOKEN="op://Vault/item/field"
 
 ## `rc.zsh` Files
 
-Files named `rc.zsh` are sourced from the interactive zsh startup path, usually
-from `files/config/zsh/zshrc`. They are for app-specific interactive shell
-behavior only.
+Files named `rc.zsh` are sourced from the interactive zsh startup path, usually from `files/config/zsh/zshrc`. They are for app-specific interactive shell behavior only.
 
 Use `rc.zsh` files for:
 
@@ -98,10 +88,9 @@ Do not use `rc.zsh` files for:
 - network calls during shell startup
 - expensive startup checks unless there is a concrete reason
 
-Use the matching `env.zsh` file for environment variables and other settings
-that should exist outside interactive shells. For example, app config paths,
-tool-specific environment variables, and path additions belong in `env.zsh`,
-not `rc.zsh`.
+Use the matching `env.zsh` file for environment variables and other settings that should exist outside interactive shells. For example, app config paths, tool-specific environment variables, and path additions belong in `env.zsh`, not `rc.zsh`.
+
+An interactive-only variable may stay in `rc.zsh` when it is tightly coupled to the interactive setup around it and should be removed with that setup. For example, an fzf Ctrl-R option that disables multi-select only because a custom history widget immediately executes the selected command belongs next to that widget, not in a broader fzf `env.zsh` file.
 
 Every `rc.zsh` file should start with this boilerplate:
 
@@ -128,8 +117,7 @@ if [[ -r "$XDG_CONFIG_HOME/tool/generated.zsh" ]]; then
 fi
 ```
 
-Wrappers that shadow commands should use `command` internally to avoid
-recursing into themselves:
+Wrappers that shadow commands should use `command` internally to avoid recursing into themselves:
 
 ```zsh
 tool() {

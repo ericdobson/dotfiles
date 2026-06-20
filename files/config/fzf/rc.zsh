@@ -5,5 +5,24 @@
 
 # Set up fzf key bindings and fuzzy completion
 if [[ -o interactive ]] && [[ -t 0 ]] && (( $+commands[fzf] )); then
+  # Enter executes the selected history entry below, so keep Ctrl-R single-select.
+  FZF_CTRL_R_OPTS="${FZF_CTRL_R_OPTS:+$FZF_CTRL_R_OPTS }--no-multi"
+
   source <(fzf --zsh)
+
+  fzf-history-widget-accept-line() {
+    fzf-history-widget
+    local ret=$?
+
+    if (( ret == 0 )) && [[ -n "$BUFFER" ]]; then
+      zle accept-line
+    fi
+
+    return $ret
+  }
+
+  zle -N fzf-history-widget-accept-line
+  bindkey -M emacs '^R' fzf-history-widget-accept-line
+  bindkey -M viins '^R' fzf-history-widget-accept-line
+  bindkey -M vicmd '^R' fzf-history-widget-accept-line
 fi
