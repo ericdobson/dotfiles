@@ -1,1 +1,4 @@
 # Lazygit config.
+
+os:
+  editPreset: 'helix (hx)'
