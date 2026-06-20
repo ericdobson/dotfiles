@@ -3,9 +3,12 @@
 theme = "tinted-helix-themes-file"
 
 [editor]
-line-number = "absolute"
-rulers = [80]
-text-width = 79
+line-number = "relative"
+continue-comments = false
+bufferline = "multiple"
+color-modes = true
+trim-final-newlines = true
+trim-trailing-whitespace = true
 
 [editor.soft-wrap]
 enable = true
