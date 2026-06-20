@@ -6,4 +6,12 @@
 # or expensive command substitutions.
 
 export _ZO_DATA_DIR="$XDG_DATA_HOME"
-export _ZO_ECHO=1
+
+# do not print the matched directory
+export _ZO_ECHO=0
+
+# exclude from database
+export _ZO_EXCLUDE_DIRS=$HOME:$HOME/.config/*
+
+# resolve symlinks before adding to database
+export _ZO_RESOLVE_SYMLINKS=1
