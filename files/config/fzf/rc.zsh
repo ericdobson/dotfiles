@@ -5,8 +5,10 @@
 
 # Set up fzf key bindings and fuzzy completion
 if [[ -o interactive ]] && [[ -t 0 ]] && (( $+commands[fzf] )); then
-  # Enter executes the selected history entry below, so keep Ctrl-R single-select.
-  FZF_CTRL_R_OPTS="${FZF_CTRL_R_OPTS:+$FZF_CTRL_R_OPTS }--no-multi"
+  # fzf 0.73's Ctrl-R widget enables --multi by default. Force single-select so
+  # the Enter handler below executes exactly one history entry.
+  [[ " $FZF_CTRL_R_OPTS " == *" --no-multi "* ]] ||
+    FZF_CTRL_R_OPTS="${FZF_CTRL_R_OPTS:+$FZF_CTRL_R_OPTS }--no-multi"
 
   source <(fzf --zsh)
 
