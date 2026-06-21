@@ -10,6 +10,40 @@ color-modes = true
 trim-final-newlines = true
 trim-trailing-whitespace = true
 
+[editor.statusline]
+right = [
+  "diagnostics",
+  "workspace-diagnostics",
+  "selections",
+  "register",
+  "position",
+  "total-line-numbers",
+  "separator",
+  "file-type",
+  "file-indent-style",
+  "file-line-ending",
+  "file-encoding",
+]
+mode.normal = "N"
+mode.insert = "I"
+mode.select = "S"
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
+[editor.whitespace]
+render = "none" # for quick editing to "all" if desired
+
+[editor.indent-guides]
+render = true # test for a while
+skip-levels = 1
+
+[editor.gutters.line-numbers]
+min-width = 2
+
 [editor.soft-wrap]
 enable = true
 wrap-at-text-width = true
