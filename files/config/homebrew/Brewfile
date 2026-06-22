@@ -12,6 +12,7 @@ brew "dua-cli"
 brew "dust"
 brew "exiftool"
 brew "eza"
+brew "fclones"
 brew "fd"
 brew "ffmpeg-full", link: :overwrite # yazi video thumbnails
 brew "fzf"
