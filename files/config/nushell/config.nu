@@ -16,5 +16,6 @@ $env.config.highlight_resolved_externals = true
 const config_dir = ($nu.default-config-dir | path join "../")
 
 source ($config_dir | path join "starship/config.nu")
+source ($config_dir | path join "tinted-theming/tinty/config.nu")
 source ($config_dir | path join "yazi/config.nu")
 source ($config_dir | path join "zoxide/config.nu")
