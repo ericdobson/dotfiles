@@ -1,7 +1,5 @@
 # vim: syntax=ruby filetype=ruby
 
-tap "tinted-theming/tinted"
-
 brew "aerc"
 brew "awscli"
 brew "bat"
@@ -27,6 +25,7 @@ brew "libpq" # for psql
 brew "mas"
 brew "nb"
 brew "node"
+# brew "nushell"
 brew "pinentry-mac"
 brew "pipx"
 brew "poppler" # yazi pdf preview
@@ -36,7 +35,7 @@ brew "ruby"
 brew "rustup"
 brew "source-highlight"
 brew "starship"
-brew "tinty"
+brew "tinted-theming/tinted/tinty", trusted: true
 brew "tree"
 brew "w3m"
 brew "yazi"
