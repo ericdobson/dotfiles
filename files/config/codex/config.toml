@@ -76,6 +76,9 @@ trust_level = "trusted"
 [projects."/Users/eric/Documents/Codex/2026-06-18/i-ca"]
 trust_level = "trusted"
 
+[projects."/Users/eric/Developer/personal-finance"]
+trust_level = "trusted"
+
 [marketplaces.openai-bundled]
 last_updated = "2026-05-18T17:05:11Z"
 source_type = "local"
