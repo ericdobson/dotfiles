@@ -5,19 +5,10 @@
 # widgets, completions, network access, git operations, secret-manager calls,
 # or expensive command substitutions.
 
-# history
-export LESSHISTFILE="$XDG_STATE_HOME/less/lesshst"
-
 # syntax highlighting
 if src_hilite_lesspipe="$(command -v src-hilite-lesspipe.sh 2>/dev/null)"; then
   export LESSOPEN="| $src_hilite_lesspipe %s"
 fi
-
-# default command flags
-export LESS='-RF'
-
-# man page width
-export MANWIDTH=80
 
 # man page colors
 export LESS_TERMCAP_md=$'\e[1;33m'   # bold yellow
