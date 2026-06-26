@@ -5,6 +5,7 @@
 format = """
 [╭─](dimmed white) \
 [$username@$hostname ](green)\
+$shell\
 $directory \
 $git_branch$git_status
 [╰─](dimmed white)$character"""
@@ -23,13 +24,21 @@ format = "$user"
 ssh_only = false
 format = "$hostname"
 
+[shell]
+disabled = false
+format = '[$indicator]($style)'
+style = 'white'
+nu_indicator = ''
+zsh_indicator = 'zsh '
+unknown_indicator = ' '
+
 [directory]
 truncation_length = 8
 style = 'blue'
 substitutions = [
   { from = "/files/config/", to = "/…/"}
 ]
-  
+
 [custom.github]
 command = "git config --get remote.origin.url | sed -E 's#(git@github.com:|https://github.com/)##; s#\\.git$##'"
 when = "git rev-parse --is-inside-work-tree >/dev/null 2>&1"
