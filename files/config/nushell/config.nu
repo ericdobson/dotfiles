@@ -15,6 +15,7 @@ $env.config.highlight_resolved_externals = true
 # app-specific config files
 const config_dir = ($nu.default-config-dir | path join "../")
 
+source ($config_dir | path join "op/config.nu")
 source ($config_dir | path join "starship/config.nu")
 source ($config_dir | path join "tinted-theming/tinty/config.nu")
 source ($config_dir | path join "yazi/config.nu")
