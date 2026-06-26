@@ -11,3 +11,8 @@ $env.config.use_kitty_protocol = true
 
 # highlight aliased external commands as such
 $env.config.highlight_resolved_externals = true
+
+# app-specific config files
+const config_dir = ($nu.default-config-dir | path join "../")
+
+source ($config_dir | path join "zoxide/config.nu")
