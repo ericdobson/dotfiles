@@ -25,7 +25,7 @@ brew "libpq" # for psql
 brew "mas"
 brew "nb"
 brew "node"
-# brew "nushell"
+brew "nushell"
 brew "pinentry-mac"
 brew "pipx"
 brew "poppler" # yazi pdf preview
