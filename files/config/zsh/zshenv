@@ -5,6 +5,3 @@ setopt no_global_rcs
 
 # app-specific files with zsh-specific settings
 source $XDG_CONFIG_HOME/less/env.zsh
-source $XDG_CONFIG_HOME/postgresql/env.zsh
-source $XDG_CONFIG_HOME/ruby/env.zsh
-source $XDG_CONFIG_HOME/rust/env.zsh
