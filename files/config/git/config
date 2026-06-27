@@ -1,14 +1,11 @@
 [alias]
     br = branch
     brn = !export args=($1 null) && git switch main && git branch ${args[0]} && git switch ${args[0]} && echo ""
-    ch = checkout
     cm = commit
 	co = checkout
-    discard = restore
     last = log -1 HEAD
     ls = branch
     st = status
-    unstage = restore --staged
 [commit]
 	gpgsign = true
 [core]
