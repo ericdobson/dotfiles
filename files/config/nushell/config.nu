@@ -15,6 +15,7 @@ $env.config.highlight_resolved_externals = true
 # app-specific config files
 const config_dir = ($nu.default-config-dir | path join "../")
 
+source ($config_dir | path join "fzf/config.nu")
 source ($config_dir | path join "git/config.nu")
 source ($config_dir | path join "homebrew/config.nu")
 source ($config_dir | path join "lazygit/config.nu")
