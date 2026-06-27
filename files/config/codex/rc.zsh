@@ -5,7 +5,7 @@
 
 codex() {
   : "${CODEX_HOME:?CODEX_HOME must be set}"
-  command op run --env-file "$CODEX_HOME/codex.env" -- command codex "$@"
+  command op run --no-masking --env-file "$CODEX_HOME/codex.env" -- command codex "$@"
 }
 
 alias lc="/Users/eric/.local/bin/launch_codex"
