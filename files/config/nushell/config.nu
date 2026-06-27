@@ -17,6 +17,7 @@ const config_dir = ($nu.default-config-dir | path join "../")
 
 source ($config_dir | path join "aws/config.nu")
 source ($config_dir | path join "bat/config.nu")
+source ($config_dir | path join "codex/config.nu")
 source ($config_dir | path join "fzf/config.nu")
 source ($config_dir | path join "git/config.nu")
 source ($config_dir | path join "homebrew/config.nu")
