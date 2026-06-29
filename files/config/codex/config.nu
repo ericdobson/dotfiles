@@ -9,7 +9,7 @@ def --wrapped codex [...args] {
     error make { msg: "CODEX_HOME must be set" }
   }
 
-  let env_file = ($env.CODEX_HOME | path join "codex.env")
+  let env_file = ($env.CODEX_HOME | path join codex.env)
 
   ^op run --no-masking --env-file $env_file -- codex ...$args
 }
