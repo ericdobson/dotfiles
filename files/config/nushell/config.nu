@@ -1,6 +1,9 @@
 # config.nu
 #
 # See https://www.nushell.sh/book/configuration.html
+#
+# ./autoload contents:
+#   - general aliases
 
 # hide opening display
 $env.config.show_banner = false
