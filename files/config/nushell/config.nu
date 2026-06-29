@@ -15,6 +15,17 @@ $env.config.use_kitty_protocol = true
 # highlight aliased external commands as such
 $env.config.highlight_resolved_externals = true
 
+# history
+let history_dir = ($env.XDG_STATE_HOME | path join nushell)
+mkdir $history_dir
+
+$env.config.history = {
+  path: $history_dir
+  max_size: 10_000
+  file_format: sqlite
+  isolation: false
+}
+
 # app-specific config files
 const config_dir = ($nu.default-config-dir | path join "../")
 
