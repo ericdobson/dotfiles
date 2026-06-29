@@ -51,10 +51,11 @@ alias pst='pbpaste >'
 # +-----+
 
 # push current screen to scrollback then clear
-cl() {
+clear() {
   repeat ${LINES:-50} print
   command clear
 }
+alias cl='clear'
 alias d='dirs -v'                                               # view directory stack
 for index ({1..9}) alias "$index"="cd +${index}"; unset index   # access directory stack
 alias hst='history'
