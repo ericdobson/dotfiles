@@ -5,7 +5,7 @@
 # widgets, completions, network access, git operations, secret-manager calls,
 # or expensive command substitutions.
 
-export _ZO_DATA_DIR="$XDG_DATA_HOME"
+export _ZO_DATA_DIR="$XDG_DATA_HOME/zoxide"
 
 # do not print the matched directory
 export _ZO_ECHO=0
