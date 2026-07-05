@@ -16,6 +16,9 @@ right_format = "$cmd_duration${custom.github}"
 # Disable the blank line at the start of the prompt
 add_newline = false
 
+# Increase if prompt commands repeatedly time out while the system is busy.
+# command_timeout = 1000
+
 [username]
 show_always = true
 format = "$user"
@@ -42,6 +45,8 @@ substitutions = [
 [custom.github]
 command = "git config --get remote.origin.url | sed -E 's#(git@github.com:|https://github.com/)##; s#\\.git$##'"
 when = "git rev-parse --is-inside-work-tree >/dev/null 2>&1"
+# Enable if this prompt helper is useful but occasionally exceeds Starship's timeout.
+# ignore_timeout = true
 format = "[$output](dimmed purple)"
 
 [cmd_duration]
