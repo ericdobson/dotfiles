@@ -8,6 +8,11 @@
 # hide opening display
 $env.config.show_banner = false
 
+# prompt
+$env.config.edit_mode = 'vi'
+# $env.PROMPT_INDICATOR_VI_INSERT = $"(ansi green_bold)❯(ansi reset) "
+# $env.PROMPT_INDICATOR_VI_NORMAL = $"(ansi green_bold)❮(ansi reset) "
+
 # kitty shell integration
 # everything else is true by default
 $env.config.use_kitty_protocol = true
