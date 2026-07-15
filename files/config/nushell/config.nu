@@ -12,6 +12,8 @@ $env.config.show_banner = false
 $env.config.edit_mode = 'vi'
 # $env.PROMPT_INDICATOR_VI_INSERT = $"(ansi green_bold)❯(ansi reset) "
 # $env.PROMPT_INDICATOR_VI_NORMAL = $"(ansi green_bold)❮(ansi reset) "
+$env.PROMPT_INDICATOR_VI_INSERT = ""
+$env.PROMPT_INDICATOR_VI_NORMAL = ""
 
 # kitty shell integration
 # everything else is true by default
