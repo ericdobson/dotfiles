@@ -1,0 +1,15 @@
+# Put completed downloads in the standard user download directory.
+--paths ~/Downloads
+
+# Use readable, collision-resistant filenames.
+--output "%(title)s [%(id)s].%(ext)s"
+
+# A video URL copied from a playlist should download only that video.
+--no-playlist
+
+# Keep existing downloads intact and resume interrupted downloads.
+--no-overwrites
+--continue
+
+# Preserve useful metadata and chapter markers in the media file.
+--embed-metadata
