@@ -1,5 +1,12 @@
 # vim: syntax=ruby filetype=ruby
 
+# rust
+brew "rustup"
+brew "probe-rs-tools"
+brew "gdb"
+brew "minicom"
+brew "lsusb"
+
 brew "aerc"
 brew "awscli"
 brew "bat"
@@ -32,7 +39,6 @@ brew "poppler" # yazi pdf preview
 brew "pytest"
 brew "ripgrep"
 brew "ruby"
-brew "rustup"
 brew "source-highlight"
 brew "starship"
 brew "tinted-theming/tinted/tinty", trusted: true
