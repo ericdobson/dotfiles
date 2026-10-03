@@ -1,5 +1,8 @@
 .app-server-state-reconciled-v1
+.chatgpt-projects/
 .codex-global-state.json*
+.sandbox_migration
+..codex-global-state.json.tmp-*
 .personality_migration
 .tmp
 ambient-suggestions/
@@ -15,11 +18,14 @@ log/
 logs_2.sqlite*
 memories_1.sqlite*
 models_cache.json
+queue_1.sqlite*
 session_index.jsonl
 sessions/
 shell_snapshots/
 sqlite/
 state_5.sqlite*
+thread-writer-locks/
+thread_history_1.sqlite*
 tmp/
 vendor_imports/
 version.json

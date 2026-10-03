@@ -43,6 +43,7 @@ brew "source-highlight"
 brew "starship"
 brew "tinted-theming/tinted/tinty", trusted: true
 brew "tree"
+brew "uv"
 brew "w3m"
 brew "yazi"
 brew "yt-dlp"

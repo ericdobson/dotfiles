@@ -1,0 +1,26 @@
+#!/usr/bin/env zsh
+
+set -euo pipefail
+
+: "${CODEX_HOME:?CODEX_HOME must be set}"
+
+if (( ! $+commands[uv] )); then
+  print -u2 "validate-skill: uv is required; install it through the Homebrew Brewfile"
+  exit 127
+fi
+
+if (( $# != 1 )); then
+  print -u2 "usage: validate-skill <skill-directory>"
+  exit 64
+fi
+
+typeset -r validator="$CODEX_HOME/skills/.system/skill-creator/scripts/quick_validate.py"
+
+if [[ ! -r "$validator" ]]; then
+  print -u2 "validate-skill: bundled validator not found: $validator"
+  exit 1
+fi
+
+exec env UV_CACHE_DIR="${TMPDIR:-/tmp}/codex-uv-cache" \
+  "$commands[uv]" run --isolated --with 'PyYAML>=6,<7' \
+  "$validator" "$1"

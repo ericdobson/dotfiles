@@ -1,5 +1,11 @@
 # AGENTS.md
 
+## codex skill validation
+
+- Validate Codex skills with `"$CODEX_HOME/bin/validate-skill" <skill-directory>`.
+- If a repository explicitly provides its own skill-validation command or Python environment, follow the repository's instructions instead.
+- Do not execute the bundled `quick_validate.py` directly, install its dependencies into Homebrew Python, or modify files under `$CODEX_HOME/skills/.system`.
+
 ## git
 
 - Unless explicitly instructed differently by the user, leave all changes unstaged.
