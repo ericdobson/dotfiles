@@ -18,10 +18,13 @@ log/
 logs_2.sqlite*
 memories_1.sqlite*
 models_cache.json
+plugins/
+project-chatgpt-provisioning/
 queue_1.sqlite*
 session_index.jsonl
 sessions/
 shell_snapshots/
+.sqlite-maintenance.lock
 sqlite/
 state_5.sqlite*
 thread-writer-locks/
